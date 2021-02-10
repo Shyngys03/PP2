@@ -1,3 +1,1 @@
-a = set(input().split())
-
-print(len(a))
+print(len(set(int(i) for i in input().split())))
