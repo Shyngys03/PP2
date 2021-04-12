@@ -97,6 +97,7 @@ while not done:
         coins += 1
         coin_x = random.randint(240, 510)
         coin_y = random.randint(5, 10)
+        pygame.display.update()
 
     screen.blit(background, (200, 0))
 
