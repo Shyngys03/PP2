@@ -123,7 +123,7 @@ def draw_circle(screen, start, end, color):
 
     top = (min(x1, x2), min(y1, y2))
 
-    radius_circle = abs(max(x1, x2) - top[0])
+    radius_circle = abs(max(x1, x2) - top[0]) / 2
     center = (int((x1 + x2) / 2), int((y1 + y2) / 2))
 
     pygame.draw.circle(screen, color, center, radius_circle)
