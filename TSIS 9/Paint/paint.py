@@ -140,7 +140,7 @@ while not done:
                 pygame.image.save(screen, 'image.png')
             if event.key == pygame.K_q and not pencil:
                 pencil = True
-                drawing = True
+                #drawing = True
                 rect = False
                 is_circle = False
             

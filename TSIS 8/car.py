@@ -31,7 +31,7 @@ coin_size = 50
 playerImage = pygame.image.load("Player.png")
 enemyImage = pygame.image.load("Enemy.png")
 coinImage = pygame.image.load("coin.png")
-
+black = pygame.image.load("blackback.png")
 
 def show_player(x, y):
     screen.blit(playerImage, (x, y))
@@ -56,6 +56,7 @@ def collect_coin(player_x, player_y, coin_x, coin_y):
 
 coins = 0
 def show_score(x, y):
+    screen.blit(black, (x, y))
     s = font.render("Coins: " + str(coins), True, (255, 255, 0))
     screen.blit(s, (x, y))
 
@@ -66,8 +67,8 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
 
-    enemy_dy = random.randrange(1, 3)
-    coin_dy = random.randrange(1, 3)
+    enemy_dy = random.randint(1, 2)
+    coin_dy = random.randint(1, 2)
     score_end = font.render("Score: " + str(coins), True, (0, 0, 0))
 
     pressed = pygame.key.get_pressed()
